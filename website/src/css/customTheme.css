@@ -136,3 +136,13 @@ kbd {
 .postHeader {
   margin-top: 2rem;
 }
+
+.cu_label {
+  float: none;
+  display:flex;
+  margin:5px 0;
+  width:100%;
+}
+.cu_label input {
+  margin-right: 5px
+}

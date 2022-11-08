@@ -3,7 +3,7 @@ export const ObjectiveQuiz = ({options}) => {
   const Checkbox = ({option}) => {
     const { name, image, value } = option;
     return (
-      <label>
+      <label className="cu_label">
         <input type="checkbox" value={value} />
         { name || `` }
         { image && (<img src={image} alt="" />) }
