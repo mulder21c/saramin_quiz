@@ -39,17 +39,17 @@ const config = {
       items: [
         {
           to: "/",
-          label: "지침서",
+          label: "퀴즈",
           position: "left",
         },
         {
-          to: "/help",
-          label: "지원",
+          to: "https://sri-fe1.notion.site/Web-Accessibility-101-f9fbf1776dcc4641a5858cdd1d5432c5",
+          label: "웹 접근성 101",
           position: "left",
         },
         {
-          to: "/translate",
-          label: "번역",
+          to: "https://sri-fe1.notion.site/7f63c1d4dff04051b4fff1390628f99c",
+          label: "사람인 웹 접근성 가이드",
           position: "left",
         },
       ],
