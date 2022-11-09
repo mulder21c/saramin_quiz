@@ -64,6 +64,7 @@ const config = {
         alt: "Teach Access",
       },
     },
+    tableOfContents: {},
   },
 };
 

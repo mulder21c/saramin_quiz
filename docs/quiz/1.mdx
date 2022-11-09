@@ -3,21 +3,37 @@ title: 사람인 웹 접근성 퀴즈
 sidebar_label: Quiz 1
 id: quiz-1
 slug: /quiz/1
+hide_table_of_contents: true
 ---
 
 ## Q1. 다음 중 웹 접근성에서 고려되지 않아도 되는 사용자는 누구일까요?
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 
-<ObjectiveQuiz options={ [
+<ObjectiveQuiz
+  options={[
     {
-      name: `답1`,
+      label: `답1`,
       image: `https://via.placeholder.com/350x150`,
       value: 1,
     },
     {
-      name: `답2`,
+      label: `답2`,
       image: ``,
       value: 2,
+    },
+    {
+      label: `답3`,
+      image: ``,
+      value: 3,
+    },
+    {
+      label: `답4`,
+      image: ``,
+      value: 4,
     }
-  ]}></ObjectiveQuiz>
+  ]}
+  answer={3}
+>
+  블라블라
+</ObjectiveQuiz>

@@ -1,18 +1,41 @@
 import { useState } from "react";
-export const ObjectiveQuiz = ({options}) => {
-  const Checkbox = ({option}) => {
-    const { name, image, value } = option;
-    return (
-      <label className="cu_label">
-        <input type="checkbox" value={value} />
-        { name || `` }
-        { image && (<img src={image} alt="" />) }
-      </label>
-    )
+import { uid } from "./Uid.mdx";
+import { isEqualSet } from "./IsEqualSet.mdx";
+import { Checkbox } from "./Checkbox.mdx";
+import { VerifyButton } from "./VerifyButton.mdx";
+import { Feedback } from "./Feedback.mdx";
+
+export const ObjectiveQuiz = ({options, answer, children}) => {
+  const [feedback, setFeedback] = useState(null);
+  const [checkedList, setCheckedList] = useState(new Set());
+  const handleCheckedList = ({value, checked}) => {
+    if (checked) checkedList.add(value)
+    else checkedList.delete(value)
+    setCheckedList(checkedList);
+  };
+  const checkExercise = () => {
+    if (checkedList.size === 0) {
+      alert(`답을 선택하세요`);
+      return;
+    }
+    const correct = new Set(Array.isArray(answer) ? answer : [String(answer)]);
+    setFeedback(isEqualSet(correct, checkedList));
   };
   return (
     <>
-      {options.map((option, index) => (<Checkbox option={option} key={index}></Checkbox>))}
+      <div className="answer">
+        {options.map((option, index) => (
+          <Checkbox
+            key={index}
+            option={option}
+            setCheckedList={handleCheckedList}
+          />
+        ))}
+      </div>
+      <VerifyButton checkExercise={checkExercise} feedback={feedback}  />
+      <Feedback feedback={feedback}>
+        {children}
+      </Feedback>
     </>
   );
 };
