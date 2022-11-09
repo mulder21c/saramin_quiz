@@ -1,10 +1,12 @@
+const mode = process.env.BABEL_ENV;
+
 const config = {
-  title: "Teach Access 지침서",
-  tagline: "접근 가능한 모바일 및 웹 앱을 만들기 위한 모범 사례",
-  url: "https://teachaccess.mulder21c.io",
-  baseUrl: "/",
-  organizationName: "teachaccess",
-  projectName: "지침서",
+  title: "사람인 웹 접근성 교육",
+  tagline: "",
+  url: "https://mulder21c.github.io/",
+  baseUrl: mode === "production" ? "/saramin_quiz/" : "/",
+  organizationName: "mulder21c",
+  projectName: "saramin_quiz",
   deploymentBranch: "gh-pages",
   scripts: ["https://buttons.github.io/buttons.js", "/js/scriptHelper.js"],
   favicon: "../img/logo-teach-access.svg",
