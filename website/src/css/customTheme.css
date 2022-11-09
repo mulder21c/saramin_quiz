@@ -216,6 +216,7 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__label::
   color: var(--ifm-button-color);
   font-weight: 900;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .verify-btn--success {
