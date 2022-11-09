@@ -5,7 +5,7 @@ import { Checkbox } from "./Checkbox.mdx";
 import { VerifyButton } from "./VerifyButton.mdx";
 import { Feedback } from "./Feedback.mdx";
 
-export const ObjectiveQuiz = ({options, answer}) => {
+export const ObjectiveQuiz = ({options, answer, children}) => {
   const [feedback, setFeedback] = useState(null);
   const [checkedList, setCheckedList] = useState(new Set());
   const handleCheckedList = ({value, checked}) => {
@@ -34,7 +34,7 @@ export const ObjectiveQuiz = ({options, answer}) => {
       </div>
       <VerifyButton checkExercise={checkExercise} feedback={feedback}  />
       <Feedback feedback={feedback}>
-        블라블라
+        {children}
       </Feedback>
     </>
   );
