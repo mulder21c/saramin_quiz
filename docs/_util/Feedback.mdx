@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export const Feedback = ({feedback, answer, children}) => {
+export const Feedback = ({id, feedback, answer, children = []}) => {
   answer = Array.isArray(answer) ? answer : [String(answer)];
-  children = (children && children.length) ? children : [children];
   const isHidden = feedback === null;
-  const [Correct, ...Description] = children;
+  const Correct = children.find(child => child.props.mdxType === 'Correct')
+  const Description = Correct ? [...children].splice(1) : children;
   return (
-    <div hidden={isHidden} className="feedback">
+    <div id={id} hidden={isHidden} className="feedback">
       <h2 className="sr-only">풀이 결과</h2>
       <div className="feedback__result">
         {
@@ -40,6 +40,7 @@ export const Feedback = ({feedback, answer, children}) => {
         Description
         ? (
             <div className="feedback__desc">
+              <h3 className="feedback__desc__heading">📢 더 알아보기</h3>
               {Description}
             </div>
           )

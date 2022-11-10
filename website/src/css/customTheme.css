@@ -290,11 +290,6 @@ html[data-theme='dark'] .feedback {
   height: 50px;
 }
 
-.feedback__correct__heading {
-  font-size: inherit;
-  font-weight: 900;
-}
-
 .feedback__answer {
   margin-top: 1rem;
 }
@@ -310,6 +305,13 @@ html[data-theme='dark'] .feedback {
 .footer {
   display:none;
 }
+
+.feedback__correct__heading,
+.feedback__desc__heading {
+  font-size: inherit;
+  font-weight: 900;
+}
+
 .sr-only{
   overflow: hidden;
   position: relative;
