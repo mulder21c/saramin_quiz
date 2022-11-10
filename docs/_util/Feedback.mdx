@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from "react";
 
 export const Feedback = ({feedback, answer, children = []}) => {
   answer = Array.isArray(answer) ? answer : [String(answer)];
+  children = children.lenght ? children : [children];
   const isHidden = feedback === null;
-  const Correct = [...children].find(child => child.props.mdxType === 'Correct')
+  const Correct = [...children].find(child => child?.props?.mdxType === 'Correct')
   const Description = Correct ? [...children].splice(1) : children;
   const Feedback = useRef();
   (typeof window !== undefined) && useEffect(
