@@ -158,24 +158,33 @@ article .markdown header {
 .answer {
   width: 100%;
   display: grid;
+  grid-template-columns: repeat(auto-fill, 100%);
   column-gap: 2rem;
-  row-gap: 1.5rem;
   margin-top: 3rem;
 }
-.answer.answer--column-1 {
-  grid-template-columns: repeat(auto-fill, 100%);
-}
-.answer.answer--column-2 {
-  grid-template-columns: repeat(auto-fill, calc(50% - 1rem));
-}
+.answer.answer--column-1,
+.answer.answer--column-2,
 .answer.answer--column-3 {
-  grid-template-columns: repeat(auto-fill, calc(30% - 1rem));
+  row-gap: 0;
+}
+@media (min-width: 640px) {
+  .answer.answer--column-2,
+  .answer.answer--column-3 {
+    grid-template-columns: repeat(auto-fill, calc(50% - 1rem));
+    row-gap: 1.5rem;
+  }
+}
+@media (min-width: 1300px) {
+  .answer.answer--column-3 {
+    grid-template-columns: repeat(auto-fill, calc(30% - 1rem));
+  }
 }
 
-.answer__item {
+.answer:not(.answer--column-1) .answer__item {
   max-width: 360px;
   min-width: calc(320px - 2rem - 2em);
 }
+
 .answer__item__checkbox {
   flex: none;
   overflow: hidden;
