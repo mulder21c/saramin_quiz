@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-export const Feedback = ({feedback, children}) => {
+export const Feedback = ({feedback, answer, children}) => {
+  answer = Array.isArray(answer) ? answer : [String(answer)];
+  children = children.length ? children : [children];
   const isHidden = feedback === null;
+  const [Correct, ...Description] = children;
   return (
     <div hidden={isHidden} className="feedback">
+      <h2 className="sr-only">풀이 결과</h2>
       <div className="feedback__result">
         {
           feedback
@@ -15,10 +19,28 @@ export const Feedback = ({feedback, children}) => {
         }
       </div>
       {
-        children
+        feedback
+        ? ""
+        : (
+          <p className="feedback__answer">
+            정답은 <strong>{ answer.join(", ") }</strong> 입니다.
+          </p>
+        )
+      }
+      {
+        feedback === false && Correct
+        ? (
+            <div className="feedback__correct">
+              {Correct}
+            </div>
+          )
+        : ""
+      }
+      {
+        Description
         ? (
             <div className="feedback__desc">
-              {children}
+              {Description}
             </div>
           )
         : ""

@@ -286,6 +286,32 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__wrapper
   height: 50px;
 }
 
+.feedback__correct__heading {
+  font-size: inherit;
+  font-weight: 900;
+}
+
+.feedback__answer {
+  margin-top: 1rem;
+}
+
+.feedback__answer strong {
+  font-size: 20px;
+  color: var(--ifm-color-primary-darker);
+}
+
 .feedback__desc {
   margin-top: 2rem;
+}
+
+.sr-only{
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
 }

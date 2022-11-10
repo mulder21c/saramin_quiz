@@ -33,7 +33,7 @@ export const ObjectiveQuiz = ({options, answer, column = 2, children}) => {
         ))}
       </div>
       <VerifyButton checkExercise={checkExercise} feedback={feedback}  />
-      <Feedback feedback={feedback}>
+      <Feedback feedback={feedback} answer={answer}>
         {children}
       </Feedback>
     </>
