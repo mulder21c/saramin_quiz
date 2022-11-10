@@ -18,8 +18,8 @@ const config = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
           path: "../docs",
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",

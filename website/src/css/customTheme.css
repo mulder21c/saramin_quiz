@@ -247,7 +247,11 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__label::
 
 .feedback {
   padding: 2em;
+  color:var(--ifm-color-content);
   background-color: var(--ifm-color-gray-200);
+}
+html[data-theme='dark'] .feedback {
+  background-color: var(--ifm-contrast-background-dark-value);
 }
 
 .feedback__result{
@@ -266,4 +270,7 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__label::
 
 .feedback__desc {
   margin-top: 2rem;
+}
+.footer {
+  display:none;
 }
