@@ -160,8 +160,8 @@ article .markdown header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10em;
-  margin-top: 5rem;
+  gap: 2.5rem;
+  margin-top: 3rem;
 }
 
 .answer__item {
@@ -189,6 +189,7 @@ article .markdown header {
   min-width: 100%;
   display: flex;
   flex-flow: row nowrap;
+  font-size: 14px;
 }
 
 .answer__item__label::before {
@@ -198,7 +199,7 @@ article .markdown header {
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  margin-right: .5em;
+  margin-right: 1em;
   width: 1.5em;
   height: 1.5em;
   border: 2px solid var(--checkbox-border);
@@ -221,9 +222,10 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__label::
   line-height: 1.3;
 }
 .answer__item__label > span > img{
-  max-width: 360px;
+  max-width: 320px;
   display: block;
   margin-top: .5em;
+  user-select: none;
 }
 .verify-btn {
   margin: 5rem 0;
