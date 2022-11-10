@@ -5,7 +5,7 @@ import { Checkbox } from "./Checkbox.mdx";
 import { VerifyButton } from "./VerifyButton.mdx";
 import { Feedback } from "./Feedback.mdx";
 
-export const ObjectiveQuiz = ({options, answer, children}) => {
+export const ObjectiveQuiz = ({options, answer, column = 2, children}) => {
   const [feedback, setFeedback] = useState(null);
   const [checkedList, setCheckedList] = useState(new Set());
   const handleCheckedList = ({value, checked}) => {
@@ -23,7 +23,7 @@ export const ObjectiveQuiz = ({options, answer, children}) => {
   };
   return (
     <>
-      <div className="answer">
+      <div className={`answer answer--column-${column}`}>
         {options.map((option, index) => (
           <Checkbox
             key={index}

@@ -156,24 +156,28 @@ article .markdown header {
 }
 
 .answer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2.5rem;
+  width: 100%;
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 1.5rem;
   margin-top: 3rem;
+}
+.answer.answer--column-1 {
+  grid-template-columns: repeat(auto-fill, 100%);
+}
+.answer.answer--column-2 {
+  grid-template-columns: repeat(auto-fill, calc(50% - 1rem));
+}
+.answer.answer--column-3 {
+  grid-template-columns: repeat(auto-fill, calc(30% - 1rem));
 }
 
 .answer__item {
-  flex: 1 1 320px;
+  max-width: 360px;
   min-width: calc(320px - 2rem - 2em);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
-
 .answer__item__checkbox {
+  flex: none;
   overflow: hidden;
   position: relative;
   z-index: -1;
@@ -185,14 +189,14 @@ article .markdown header {
   clip-path: inset(50%);
 }
 
-.answer__item__label {
+.answer__item__wrapper {
   min-width: 100%;
   display: flex;
   flex-flow: row nowrap;
   font-size: 14px;
 }
 
-.answer__item__label::before {
+.answer__item__wrapper::before {
   content: "";
   flex: 0 0 auto;
   display: inline-flex;
@@ -206,29 +210,36 @@ article .markdown header {
   border-radius: 5px;
   background-color: var(--checkbox-background);
 }
-.answer__item__checkbox:checked + .answer__item__label::before {
+.answer__item__checkbox:checked + .answer__item__wrapper::before {
   background-color: var(--checkbox-background-checked);
   background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23006832' d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
 }
-html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__label::before {
+html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__wrapper::before {
   background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
 }
-.answer__item__label > span{
+.answer__item__label {
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
   font-size: 1.25em;
-  line-height: 1.3;
+  line-height: 1.6;
 }
-.answer__item__label > span > img{
-  max-width: 320px;
+.answer__item__label > span:first-child {
+  display: inline-block;
+  height: 3.2em;
+}
+.answer__item__label > img{
+  max-width: 100%;
   display: block;
-  margin-top: .5em;
+  border-radius: 4px;
   user-select: none;
+  box-shadow: var(--ifm-global-shadow-lw)
 }
+
+
 .verify-btn {
-  margin: 5rem 0;
+  margin: 3rem 0;
   width: 10em;
   height: 3em;
   border: 0;
