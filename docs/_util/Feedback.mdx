@@ -3,17 +3,17 @@ import { useState, useEffect, useRef } from "react";
 export const Feedback = ({feedback, answer, children = []}) => {
   answer = Array.isArray(answer) ? answer : [String(answer)];
   const isHidden = feedback === null;
-  const Correct = children.find(child => child.props.mdxType === 'Correct')
+  const Correct = [...children].find(child => child.props.mdxType === 'Correct')
   const Description = Correct ? [...children].splice(1) : children;
   const Feedback = useRef();
-  const observer = new MutationObserver(mutations => {
-    mutations.forEach(({target}) => {
-      target.hidden === false
-      && target.scrollIntoView({behavior: `smooth`, block: `nearest`});
-    });
-  });
-  useEffect(
+  (typeof window !== undefined) && useEffect(
     () => {
+      const observer = new MutationObserver(mutations => {
+        mutations.forEach(({target}) => {
+          target.hidden === false
+          && target.scrollIntoView({behavior: `smooth`, block: `nearest`});
+        });
+      });
       observer.observe(Feedback.current, { attributes: true });
       return () => {
         observer.disconnect(Feedback.current, { attributes: true })
