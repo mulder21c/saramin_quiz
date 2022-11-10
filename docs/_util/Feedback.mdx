@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const Feedback = ({feedback, answer, children}) => {
   answer = Array.isArray(answer) ? answer : [String(answer)];
-  children = children.length ? children : [children];
+  children = (children && children.length) ? children : [children];
   const isHidden = feedback === null;
   const [Correct, ...Description] = children;
   return (
