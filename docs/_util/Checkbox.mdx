@@ -18,9 +18,9 @@ export const Checkbox = ({option, setCheckedList}) => {
         className="answer__item__checkbox"
         onChange={(event) => checkHandler(event)}
       />
-      <label htmlFor={id} className="answer__item__label">
-        <span>
-          { label || `` }
+      <label htmlFor={id} className="answer__item__wrapper">
+        <span className="answer__item__label">
+          <span>{ label || `` }</span>
           { image && (<img src={image} alt="" />) }
         </span>
       </label>
