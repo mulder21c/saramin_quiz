@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
-export const Feedback = ({id, feedback, answer, children = []}) => {
+export const Feedback = ({feedback, answer, children = []}) => {
   answer = Array.isArray(answer) ? answer : [String(answer)];
   const isHidden = feedback === null;
   const Correct = children.find(child => child.props.mdxType === 'Correct')
   const Description = Correct ? [...children].splice(1) : children;
+  const Feedback = useRef();
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(({target}) => {
+      target.hidden === false
+      && target.scrollIntoView({behavior: `smooth`, block: `nearest`});
+    });
+  });
+  useEffect(
+    () => {
+      observer.observe(Feedback.current, { attributes: true });
+      return () => {
+        observer.disconnect(Feedback.current, { attributes: true })
+      };
+    },
+    [],
+  );
   return (
-    <div id={id} hidden={isHidden} className="feedback">
+    <div ref={Feedback} hidden={isHidden} className="feedback">
       <h2 className="sr-only">풀이 결과</h2>
       <div className="feedback__result">
         {
