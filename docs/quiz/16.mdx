@@ -11,38 +11,35 @@ hide_table_of_contents: true
 
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
+import { Correct } from "../_util/Correct.mdx";
 
 <ObjectiveQuiz
   column={3}
   options={[
     {
-      label: `20pt x 20pt`,
-      image: ``,
+      label: `1. 20pt x 20pt`,
       value: 1,
     },
     {
-      label: `20px x 24px`,
-      image: ``,
+      label: `2. 20px x 24px`,
       value: 2,
     },
     {
-      label: `24pt x 24pt`,
-      image: ``,
+      label: `3. 24pt x 24pt`,
       value: 3,
     },
     {
-      label: `24px x 24px`,
-      image: ``,
+      label: `4. 24px x 24px`,
       value: 4,
     }
   ]}
   answer={4}
 >
-  <div>
+  <Correct>
     <p>작은 화면에서 콘텐츠에 접근하거나 손떨림 등의 이유로 작은 컨트롤을 활성화하는데 문제가 있는 사용자가 쉽게 활성화 할 수 있을 만큼 충분히 큰 컨트롤을 보장하기 위해 최소 24x24px을 유지해주세요.</p>
-    <a href="https://sri-fe1.notion.site/135561dd3c554800a976a2a4f2085fe4">
-      🔎 자세히 알아보기
-    </a>
-  </div>
+  </Correct>
+  <a href="https://sri-fe1.notion.site/135561dd3c554800a976a2a4f2085fe4">
+    🔎 자세히 알아보기
+  </a>
   
 </ObjectiveQuiz>
