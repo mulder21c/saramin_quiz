@@ -6,12 +6,50 @@ slug: /quiz/13
 hide_table_of_contents: true
 ---
 
-## TAB UI 관련 키보드 접근성 중 맞는것을 고르세요.
+## TAB UI 관련 키보드 이동중 1번 다음에 TAB을 눌렀을때 접근해야하는 번호를 선택하세요.
 
-![Quiz 13 - 최소 명도 대비 보장](/img/a11y/quiz-contrast.png)
+![Quiz 13 - TAB UI](/img/a11y/quiz-keyboard.png)
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Correct } from "../_util/Correct.mdx";
 
+<ObjectiveQuiz
+  options={[
+    {
+      label: `1. ② 기업회원 탭`,
+      value: 1,
+    },
+    {
+      label: `2. ③ 로그인 인풋`,
+      value: 2,
+    },
+    {
+      label: `3. ④ 아이디 저장 인풋`,
+      value: 3,
+    },
+    {
+      label: `4. ⑤ 보안 스위치`,
+      value: 4,
+    },
+    {
+      label: `5. ⑥ 아이디 인풋`,
+      value: 5,
+    }
+  ]}
+  answer={[2]}
+>
+  <Correct>
+    <div>
+    - [ ]  TAB 목록 내부로 초점이 이동할 때
+    - [ ]  활성화 되어 있는 초점 이동. 탭 목록이 초점을 포함하고 있을 경우, 탭 패널이나 탭 패널 내부의 첫 번째 초점을 얻을 수 있는 요소로 초점 이동
+    - [ ]  초점이 탭 요소에 있을 때
+    - [ ]  Left Arrow: 이전 탭으로 초점 이동. 초점이 첫 번째 요소에 있었다면 마지막 탭으로 초점 이동.
+    - [ ]  Right Arrow: 다음 탭으로 초점 이동. 초점이 마지막 요소에 있었다면 첫 번째 탭으로 초점 이동.
+    </div>
+  </Correct>
+  <a href="https://sri-fe1.notion.site/Tab-UI-571d1232b0ad402bb29ddf52c0a04005">
+    🔎 자세히 알아보기
+    </a>
+</ObjectiveQuiz>
 
-텍스트와 배경 사이에 충분한 대비를 제공하여 중간 정도의 시력을 가진 사람들이 읽을 수 있도록 제공하기 위한 항목입니다.
+
