@@ -34,13 +34,13 @@ const config = {
   themeConfig: {
     navbar: {
       logo: {
-        src: "../img/logo-teach-access.svg",
-        srcDark: "../img/logo-teach-access-dark.svg",
-        alt: "Teach Access",
+        src: "/img/logo-saramin.svg",
+        srcDark: "/img/logo-saramin-dark.svg",
+        alt: "사람인",
       },
       items: [
         {
-          to: "/",
+          to: "/quiz/1",
           label: "퀴즈",
           position: "left",
         },
