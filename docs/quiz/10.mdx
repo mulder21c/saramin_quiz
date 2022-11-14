@@ -8,6 +8,15 @@ hide_table_of_contents: true
 
 ## Q10. 대체 텍스트(alt) 입력시 가장 올바른 방법을 찾으세요
 
+
+import { QuestionBox } from '../_util/QuestionBox.mdx'
+import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
+import { Correct } from "../_util/Correct.mdx";
+
+<QuestionBox
+  column={2}
+>
+
 ![11](/img/a11y/quiz-alt-img.png)
 
 ```html
@@ -15,10 +24,9 @@ hide_table_of_contents: true
 	<img src="r5xlol.png"  alt="">
 </a>
 ```
----
 
-import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
-import { Correct } from "../_util/Correct.mdx";
+</QuestionBox>
+
 
 <ObjectiveQuiz
   options={[

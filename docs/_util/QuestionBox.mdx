@@ -1,0 +1,10 @@
+
+export const QuestionBox = ({column = 1, children}) => {
+  return (
+    <>
+      <div className={`quesition-box-${column}`}>
+        {children}
+      </div>
+    </>
+  );
+};
