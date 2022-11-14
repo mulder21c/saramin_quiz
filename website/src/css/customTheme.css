@@ -270,7 +270,7 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__wrapper
 .feedback {
   padding: 2em;
   color:var(--ifm-color-content);
-  background-color: var(--ifm-color-gray-200);
+  background-color: var(--ifm-color-primary-contrast-background);
 }
 html[data-theme='dark'] .feedback {
   background-color: var(--ifm-contrast-background-dark-value);
@@ -322,4 +322,35 @@ html[data-theme='dark'] .feedback {
   width: 1px;
   height: 1px;
   clip-path: inset(50%);
+}
+
+.flex-column-3 {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .flex-column-3 {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+
+figure {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+figcaption {
+  font-size: 0.85em;
+  text-align: center;
+}
+figcaption::before{
+  content: "[ ";
+}
+figcaption::after{
+  content: " ]";
 }
