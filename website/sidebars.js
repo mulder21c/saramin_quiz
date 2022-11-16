@@ -6,6 +6,7 @@ module.exports = {
       "quiz/quiz-3",
       "quiz/quiz-4",
       "quiz/quiz-5",
+      "quiz/quiz-9",
       "quiz/quiz-10",
       "quiz/quiz-11",
       "quiz/quiz-12",
