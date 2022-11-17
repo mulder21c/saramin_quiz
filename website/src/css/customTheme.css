@@ -246,6 +246,16 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__wrapper
   box-shadow: var(--ifm-global-shadow-lw)
 }
 
+.glossary {
+  background-color: #ededed;
+  padding: 1em;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 1.15em;
+}
+.glossary > dt {
+  font-weight: bold;
+}
 
 .verify-btn {
   margin: 3rem 0;
@@ -336,6 +346,23 @@ html[data-theme='dark'] .feedback {
   .flex-column-3 {
     flex-flow: row;
     justify-content: space-between;
+  }
+}
+
+.flex-column-4 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.flex-column-4 > * {
+  flex: 1 1 calc(50% - 10px);
+}
+
+@media (min-width: 640px) {
+  .flex-column-4 > * {
+    flex: 1 1 calc(25% - 10px);
   }
 }
 
