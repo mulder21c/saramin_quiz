@@ -24,6 +24,7 @@ html[data-theme="dark"] {
   --checkbox-border: #ffffff;
   --checkbox-background: #ffffff;
   --checkbox-background-checked: #006832;
+  --ifm-color-primary-darker: #ffffff;
 }
 
 .fakeHeading {
@@ -155,6 +156,25 @@ article .markdown header {
   clip-path: inset(50%);
 }
 
+.intro {
+  margin: 2em 0;
+  font-size: 1.25em;
+}
+.intro__quiz {
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  border: 2px solid #000;
+  font-size: 2em;
+  font-weight: bold;
+}
+html[data-theme="dark"] .intro__quiz {
+  border-color: #FFF;
+}
+
 .answer {
   width: 100%;
   display: grid;
@@ -196,6 +216,11 @@ article .markdown header {
   width: 1px;
   height: 1px;
   clip-path: inset(50%);
+}
+
+.answer__item__checkbox:focus + label:before {
+  outline: 2px solid var(--ifm-color-primary-darker);
+  outline-offset: 2px;
 }
 
 .answer__item__wrapper {
@@ -268,6 +293,10 @@ html[data-theme="dark"] .answer__item__checkbox:checked + .answer__item__wrapper
   font-weight: 900;
   font-size: 1.25rem;
   cursor: pointer;
+}
+html[data-theme="dark"] .verify-btn{
+  color: white;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .verify-btn--success {
