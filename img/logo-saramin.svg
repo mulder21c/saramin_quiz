@@ -6,8 +6,8 @@
   </g>
   <g>
       <circle cx="4.5" cy="14.5" r="4.5" fill="#4876EF"></circle>
-      <circle cx="16.5" cy="14.5" r="4.5" fill="currentColor"></circle>
-      <circle cx="4.5" cy="26.5" r="4.5" fill="currentColor"></circle>
+      <circle cx="16.5" cy="14.5" r="4.5" fill="#B4C0D3"></circle>
+      <circle cx="4.5" cy="26.5" r="4.5" fill="#B4C0D3"></circle>
       <circle cx="16.5" cy="26.5" r="4.5" fill="#00D3AB"></circle>
   </g>
 </svg>
