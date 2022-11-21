@@ -1,49 +1,58 @@
 ---
 title: 사람인 웹 접근성 퀴즈
-sidebar_label: 5번 문제
-id: quiz-5
-slug: /quiz/5
+sidebar_label: 9번 문제
+id: quiz-9
+slug: /quiz/9
 hide_table_of_contents: true
 ---
 
-## Q5. 웹 접근성 향상의 기대 효과 중 아닌것을 고르세요.
-
+## Q9. 아래 이미지를 대체하기에 충분한 텍스트를 고르세요.
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
+import { Glossary } from "../_util/Glossary.mdx";
 import { Correct } from "../_util/Correct.mdx";
+import { QuestionBox } from "../_util/QuestionBox.mdx"
+
+<QuestionBox
+  column={2}
+>
+
+![11](/img/a11y/quiz-alt-img.png)
+
+
+</QuestionBox>
 
 
 <ObjectiveQuiz
   options={[
     {
-      label: `장애인, 고령자 등을 포함한 사용자층 확대`,
+      label: `이력서, 이제 쉽게 쓰자!`,
+      image: ``,
       value: 1,
     },
     {
-      label: `규정과 법적 요구 사항에 대한 준수`,
+      label: `이력서, 이제 모바일에서 쉽게 쓰자! 새로워진 모바일 이력서 확인하기`,
+      image: ``,
       value: 2,
     },
     {
-      label: `고령자 계층에게만 웹 정보 전달 강화`,
+      label: `이력서, 새로워진 모바일 이력서 확인하기`,
+      image: ``,
       value: 3,
     },
     {
-      label: `ESG(사회공헌 및 복지기업) 준수 및 향상`,
+      label: `이력서 확인하기`,
+      image: ``,
       value: 4,
     }
   ]}
-  answer={3}
+  answer={2}
 >
   <Correct>
-    <br />
-    <h6>웹 접근성 향상의 기대 효과</h6>
-    <ul>
-      <li>장애인, 고령자 등을 포함한 사용자층 확대</li>
-      <li>규정과 법적 요구 사항에 대한 준수</li>
-      <li>다양한 환경, 새로운 기기에서의 이용</li>
-      <li>개발 및 운용의 효율성 제고</li>
-      <li>사회 공헌 및 복지 기업으로서의 기업 이미지 향상</li>
-    </ul>
+    <p>이미지를 통해 시각적으로 전달되는 정보와 제공 된 대체 텍스트가 동등하지 않기 때문에, 일부 사용자는 이 이미지가 전달하는 정보를 올바르게 이해할 수 없습니다. </p>
   </Correct>
-  <p>장애인, 고령자 등과 같은 정보 소외 계층이 원하는 정보를 자유롭게 접근 할수 있게 됩니다.</p>
+  <p>'이력서, 이제 모바일에서 쉽게 쓰자! 새로워진 모바일 이력서 확인하기' 이미지를 통해 시각적으로 전달되는 정보가 동등한 수준의 대체 텍스트로 제공되어, 누구나 이미지가 전달하는 정보를 이해할 수 있습니다.</p>
+  <a href="https://sri-fe1.notion.site/5f6acd4e3e224f3e9dc163b29f6e863d">
+  🔎 자세히 알아보기
+  </a>  
 </ObjectiveQuiz>

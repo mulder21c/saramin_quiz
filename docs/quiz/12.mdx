@@ -1,12 +1,12 @@
 ---
 title: 사람인 웹 접근성 퀴즈
-sidebar_label: 11번 문제
-id: quiz-11
-slug: /quiz/11
+sidebar_label: 12번 문제
+id: quiz-12
+slug: /quiz/12
 hide_table_of_contents: true
 ---
 
-## Q11. 아래 상황은 색맹, 색약등의 장애를 가진 사용자는 정보를 인식 하기 어려운 상황입니다. 맞는 이유를 고르세요.
+## Q12. 다음의 탭 UI에서 "개인회원 탭 버튼" 다음으로 포커스 되어야 하는 것을 고르세요. 
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Glossary } from "../_util/Glossary.mdx";
@@ -17,7 +17,7 @@ import { QuestionBox } from "../_util/QuestionBox.mdx"
   column={2}
 >
 
-![11](/img/a11y/quiz-color.png)
+![Quiz 13 - TAB UI](/img/a11y/quiz-keyboard.png)
 
 </QuestionBox>
 
@@ -25,29 +25,46 @@ import { QuestionBox } from "../_util/QuestionBox.mdx"
 <ObjectiveQuiz
   options={[
     {
-      label: `배경색과 글자색의 명도대비가 안 맞다`,
+      label: `"기업회원 탭" 버튼`,
       value: 1,
     },
     {
-      label: `아이콘과 배경색과의 명도대비가 안 맞다`,
+      label: `"로그인 유지" 체크박스 `,
       value: 2,
     },
     {
-      label: `행의 간격을 텍스트 사이즈 대비 안 맞다`,
+      label: `"아이디 저장" 체크박스`,
       value: 3,
     },
     {
-      label: `색상으로만 체크 상태의 차이가 표기되는 체크 상자의 경우, 색상 인지가 어렵다.`,
+      label: `"보안" 스위치 버튼`,
       value: 4,
+    },
+    {
+      label: `"아이디" 입력 박스`,
+      value: 5,
     }
   ]}
-  answer={[4]}
+  answer={[2]}
 >
   <Correct>
-    <p>색상을 통해 정보를 전달 하는 경우 색상 인식이 어려운 색맹, 색약등의 장애를 가진 사용자는 정보를 인식하기 어렵기 때문에 색상 외 다른 수단을 통해 동일한 정보를 인식할 수 있도록 하기 위한 항목입니다.</p>
-    <p>색상으로만 체크 상태 유무를 인식 할수 없는 사용자가 있습니다.</p>
+    <br />
+    <h6>TAB UI TAB이동 방법</h6>
+    <ul>
+      <li>TAB 목록 내부로 초점이 이동할 때
+        <ul>
+          <li>활성화 되어 있는 초점 이동. 탭 목록이 초점을 포함하고 있을 경우, 탭 패널이나 탭 패널 내부의 첫 번째 초점을 얻을 수 있는 요소로 초점 이동 </li>
+        </ul>
+      </li>
+      <li>초점이 탭 요소에 있을 때
+        <ul>
+          <li>Left Arrow: 이전 탭으로 초점 이동. 초점이 첫 번째 요소에 있었다면 마지막 탭으로 초점 이동.</li>
+          <li>Right Arrow: 다음 탭으로 초점 이동. 초점이 마지막 요소에 있었다면 첫 번째 탭으로 초점 이동.</li>
+        </ul>
+      </li>
+    </ul>
   </Correct>
-  <a href="https://sri-fe1.notion.site/398b09b86a8440c9b918d50bbea82b74">
+  <a href="https://sri-fe1.notion.site/Tab-UI-571d1232b0ad402bb29ddf52c0a04005">
     🔎 자세히 알아보기
-  </a>
+    </a>
 </ObjectiveQuiz>

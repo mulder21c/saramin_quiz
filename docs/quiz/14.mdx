@@ -1,66 +1,48 @@
 ---
 title: 사람인 웹 접근성 퀴즈
-sidebar_label: 13번 문제
-id: quiz-13
-slug: /quiz/13
+sidebar_label: 14번 문제
+id: quiz-14
+slug: /quiz/14
 hide_table_of_contents: true
 ---
 
-## Q14. 저시력자 혹은 노안이 있는 사용자 시각에서 정보를 알기 힘든 부분을 고르세요.
+## Q14. 클릭, 터치 가능한 항목에 필요한 최소 사이즈는 얼마일까요?
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Glossary } from "../_util/Glossary.mdx";
 import { Correct } from "../_util/Correct.mdx";
-import { QuestionBox } from "../_util/QuestionBox.mdx"
-
-<QuestionBox
-  column={2}
->
-
-![Quiz 14 - 명도 대비 보장](/img/a11y/quiz-contrast.png)
-
-</QuestionBox>
 
 <ObjectiveQuiz
+  column={2}
   options={[
     {
-      label: `1,2,3,4,5`,
+      label: `1. 20pt x 20pt`,
+      image: `https://via.placeholder.com/26x26?text=%20`,
       value: 1,
     },
     {
-      label: `2,3,4,5`,
+      label: `2. 20px x 24px`,
+      image: `https://via.placeholder.com/20x24?text=%20`,
       value: 2,
     },
     {
-      label: `4,5`,
+      label: `3. 24pt x 24pt`,
+      image: `https://via.placeholder.com/32x32?text=%20`,
       value: 3,
     },
     {
-      label: `4`,
+      label: `4. 24px x 24px`,
+      image: `https://via.placeholder.com/24x24?text=%20`,
       value: 4,
     }
   ]}
-  answer={2}
+  answer={4}
 >
   <Correct>
-    <p>저시력 사용자가 활성 유저 인터페이스 컴포넌트 및 의미 있는 그래픽을 구별할 수 있도록 하기 위함과 텍스트와 배경 사이에 충분한 대비를 제공하여 중간 정도의 시력을 가진 사람들이 읽을 수 있도록 제공하기 위한 항목입니다.</p>
-    <h6>항목별 명도대비 설명</h6>
-    <ol>
-      <li>항목 읽혀지거나 의미가 없는 아이콘,이미지여서 명도대비 체크할 필요 없음</li>
-      <li>항목 명도대비 10.44(O)</li>
-      <li>항목 명도대비 4.1(X)</li>
-      <li>항목 아이콘 명도대비 2.62(X), 글자 3.18(X)</li>
-      <li>항목 border 명도대비 1.37(X), 글자 5.76(O)</li>
-    </ol>
+    <p>작은 화면에서 콘텐츠에 접근하거나 손떨림 등의 이유로 작은 컨트롤을 활성화하는데 문제가 있는 사용자가 쉽게 활성화 할 수 있을 만큼 충분히 큰 컨트롤을 보장하기 위해 최소 24x24px을 유지해주세요.</p>
   </Correct>
-  <p>
-    연관 지침 2가지
-    <a href="https://sri-fe1.notion.site/a70d0cf66d7f48e68307f1749614f65c">
+  <a href="https://sri-fe1.notion.site/135561dd3c554800a976a2a4f2085fe4">
     🔎 자세히 알아보기
-    </a>
-    <a href="https://sri-fe1.notion.site/a13805c62b74442abe8e0e6b8d48abb5">
-    🔎 자세히 알아보기
-    </a>
-  </p>
+  </a>
   
 </ObjectiveQuiz>

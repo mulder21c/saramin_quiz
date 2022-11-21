@@ -32,7 +32,6 @@ module.exports = {
           "quiz/quiz-13",
           "quiz/quiz-14",
           "quiz/quiz-15",
-          "quiz/quiz-16",
         ],
       },
     ],

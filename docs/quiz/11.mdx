@@ -1,12 +1,12 @@
 ---
 title: 사람인 웹 접근성 퀴즈
-sidebar_label: 10번 문제
-id: quiz-10
-slug: /quiz/10
+sidebar_label: 11번 문제
+id: quiz-11
+slug: /quiz/11
 hide_table_of_contents: true
 ---
 
-## Q10. 아래 이미지를 보고 바른 초점의 이동 방향을 고르세요.
+## Q11. 색각 이상 장애를 가진 사용자가 인식하기 어려운 화면입니다. 이유로 올바른 것을 고르세요.
 
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Glossary } from "../_util/Glossary.mdx";
@@ -17,7 +17,7 @@ import { QuestionBox } from "../_util/QuestionBox.mdx"
   column={2}
 >
 
-![11](/img/a11y/quiz-dir.jpg)
+![11](/img/a11y/quiz-color.png)
 
 </QuestionBox>
 
@@ -25,32 +25,29 @@ import { QuestionBox } from "../_util/QuestionBox.mdx"
 <ObjectiveQuiz
   options={[
     {
-      label: `1=>2=>3=>4`,
+      label: `배경색과 글자색의 명도 대비가 낮다.`,
       value: 1,
     },
     {
-      label: `1=>3=>2=>4`,
+      label: `아이콘과 배경색과의 명도 대비가 낮다.`,
       value: 2,
     },
     {
-      label: `1=>3=>4=>2`,
+      label: `텍스트 행 간격이 텍스트 사이즈 대비 좁다.`,
       value: 3,
     },
     {
-      label: `1=>4=>3=>2`,
+      label: `체크 상태가 색상으로만 구분되어 있다.`,
       value: 4,
     }
   ]}
-  answer={3}
-> 
+  answer={[4]}
+>
   <Correct>
-    <p>정상 시력을 가진 사용자는 위 콘텐츠를 이용할 때 1 → 3 → 4 → 2의 순서로 읽어 가지만, 마크업에서는 1 → 2 → 3 → 4의 순서로 제공되어 스크린리더 사용자와 같이 화면을 볼 수 없는 사용자는 콘텐츠를 잘못 이해할 수 있습니다.<br />
-     "회원님께 도움이 될 만한 합격자 인터뷰 보실래요? 헤딩 레벨 3 현직자 인터뷰 더보기 링크" 라고 먼저 인식 되기 때문에 합격자 인터뷰를 보기 위해서는 링크를 눌러야 하는 콘텐츠로 이해할 소지가 있습니다.
-    </p>
+    <p>색상을 통해 정보를 전달 하는 경우 색상 인식이 어려운 색맹, 색약등의 장애를 가진 사용자는 정보를 인식하기 어렵기 때문에 색상 외 다른 수단을 통해 동일한 정보를 인식할 수 있도록 하기 위한 항목입니다.</p>
+    <p>색상으로만 체크 상태 유무를 인식 할수 없는 사용자가 있습니다.</p>
   </Correct>
-  논리적 읽기 순서 보장(웹 페이지의 모든 콘텐츠를 의미있는 순서로 마크업해 주세요)
-  <a href="https://sri-fe1.notion.site/f6b99493d397429b8ab64e4aca5189f4">
-    🔎 더 자세히 알고 싶다면?
+  <a href="https://sri-fe1.notion.site/398b09b86a8440c9b918d50bbea82b74">
+    🔎 자세히 알아보기
   </a>
-  
 </ObjectiveQuiz>
