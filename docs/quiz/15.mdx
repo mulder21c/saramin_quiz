@@ -11,18 +11,19 @@ hide_table_of_contents: true
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Glossary } from "../_util/Glossary.mdx";
 import { Correct } from "../_util/Correct.mdx";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <ObjectiveQuiz
   column={1}
   options={[
     {
       label: `1. 입력 위치 앞에 안내`,
-      image: `../img/a11y/quiz-help-01.png`,
+      image: useBaseUrl(`/img/a11y/quiz-help-01.png`),
       value: 1,
     },
     {
       label: `2. 입력 위치 뒤에 안내`,
-      image: `../img/a11y/quiz-help-02.png`,
+      image: useBaseUrl(`/img/a11y/quiz-help-02.png`),
       value: 2,
     }
   ]}
