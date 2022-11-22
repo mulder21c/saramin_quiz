@@ -9,7 +9,7 @@ const config = {
   projectName: "saramin_quiz",
   deploymentBranch: "gh-pages",
   scripts: ["https://buttons.github.io/buttons.js"],
-  favicon: "../img/logo-saramin.svg",
+  favicon: `${this.baseUrl}img/logo-saramin.svg`,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
@@ -34,13 +34,13 @@ const config = {
   themeConfig: {
     navbar: {
       logo: {
-        src: "../img/logo-saramin.svg",
-        srcDark: "../img/logo-saramin-dark.svg",
+        src: `${this.baseUrl}img/logo-saramin.svg`,
+        srcDark: `${this.baseUrl}img/logo-saramin-dark.svg`,
         alt: "사람인",
       },
       items: [
         {
-          to: "/quiz/1",
+          to: `${this.baseUrl}quiz/1`,
           label: "퀴즈",
           position: "left",
         },
@@ -56,14 +56,14 @@ const config = {
         },
       ],
     },
-    image: "../img/undraw_online.svg",
+    image: `${this.baseUrl}img/undraw_online.svg`,
     footer: {
       links: [],
-      copyright: "Copyright © 2021 Teach Access",
+      copyright: "Copyright © 2022 사람인",
       logo: {
-        src: "../img/logo-saramin.svg",
-        srcDark: "../img/logo-saramin-dark.svg",
-        alt: "Teach Access",
+        src: `${this.baseUrl}img/logo-saramin.svg`,
+        srcDark: `${this.baseUrl}img/logo-saramin-dark.svg`,
+        alt: "사람인",
       },
     },
     tableOfContents: {},
