@@ -34,8 +34,8 @@ const config = {
   themeConfig: {
     navbar: {
       logo: {
-        src: "/img/logo-saramin.svg",
-        srcDark: "/img/logo-saramin-dark.svg",
+        src: "../img/logo-saramin.svg",
+        srcDark: "../img/logo-saramin-dark.svg",
         alt: "사람인",
       },
       items: [
