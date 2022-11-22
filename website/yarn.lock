@@ -4396,9 +4396,9 @@ feed@^4.2.2:
   dependencies:
     xml-js "^1.6.11"
 
-figures@^3.2.0:
+FigureBoxs@^3.2.0:
   version "3.2.0"
-  resolved "https://registry.yarnpkg.com/figures/-/figures-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
+  resolved "https://registry.yarnpkg.com/FigureBoxs/-/FigureBoxs-3.2.0.tgz#625c18bd293c604dc4a8ddb2febf0c88341746af"
   integrity sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==
   dependencies:
     escape-string-regexp "^1.0.5"
@@ -8822,7 +8822,7 @@ webpackbar@^5.0.0-3:
     ansi-escapes "^4.3.1"
     chalk "^4.1.0"
     consola "^2.15.0"
-    figures "^3.2.0"
+    FigureBoxs "^3.2.0"
     pretty-time "^1.1.0"
     std-env "^2.2.1"
     text-table "^0.2.0"

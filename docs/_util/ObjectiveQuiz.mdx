@@ -24,7 +24,6 @@ export const ObjectiveQuiz = ({options, answer, column = 2, children}) => {
     const correct = new Set(Array.isArray(answer) ? answer : [String(answer)]);
     setFeedback(isEqualSet(correct, checkedList));
   };
-  console.log(glossaries)
   return (
     <>
       <div className={`answer answer--column-${column}`}>

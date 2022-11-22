@@ -8,7 +8,7 @@ const config = {
   organizationName: "mulder21c",
   projectName: "saramin_quiz",
   deploymentBranch: "gh-pages",
-  scripts: ["https://buttons.github.io/buttons.js", "/js/scriptHelper.js"],
+  scripts: ["https://buttons.github.io/buttons.js"],
   favicon: "../img/logo-teach-access.svg",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",

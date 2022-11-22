@@ -14,6 +14,7 @@
   --checkbox-border: #555555;
   --checkbox-background: #ffffff;
   --checkbox-background-checked: #ffffff;
+  --shadow-color: rgba(95, 87, 152, 0.2)  ;
 }
 
 html[data-theme="dark"] {
@@ -24,6 +25,7 @@ html[data-theme="dark"] {
   --checkbox-background: #ffffff;
   --checkbox-background-checked: #006832;
   --ifm-color-primary-darker: #ffffff;
+  --shadow-color: rgba(173, 158, 255, 0.4);
 }
 
 .fakeHeading {
@@ -394,7 +396,7 @@ html[data-theme='dark'] .feedback {
   }
 }
 
-figure {
+FigureBox {
   margin: 0 0 1em;
   padding: 0;
 }
@@ -409,24 +411,15 @@ figcaption::before{
 figcaption::after{
   content: " ]";
 }
-.quesition-box-2 {
-  display: grid;
-  column-gap: 1rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  padding:2rem 0;
-  border: 1px solid var(--ifm-color-emphasis-500);
-  border-radius: 1rem;
+.figurebox {
+  width: max-content;
+  margin: 3rem 0;
+  padding: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 0 0 5px 3px var(--shadow-color);
 }
-.quesition-box-2 p {
-  margin:0;
-}
-.quesition-box-2 img {
+.figurebox img {
   max-height: 500px;
-}
-.quesition-box-2 div {
-  box-shadow: none;
+  display: block;
+  border-radius: 0.5rem;
 }

@@ -11,15 +11,11 @@ hide_table_of_contents: true
 import { ObjectiveQuiz } from "../_util/ObjectiveQuiz.mdx";
 import { Glossary } from "../_util/Glossary.mdx";
 import { Correct } from "../_util/Correct.mdx";
-import { QuestionBox } from "../_util/QuestionBox.mdx"
+import { FigureBox } from "../_util/FigureBox.mdx"
 
-<QuestionBox
-  column={2}
->
-
-![Quiz 14 - 명도 대비 보장](/img/a11y/quiz-contrast.png)
-
-</QuestionBox>
+<FigureBox>
+  <img src={"/img/a11y/quiz-contrast.png"} alt="" />
+</FigureBox>
 
 <ObjectiveQuiz
   options={[
