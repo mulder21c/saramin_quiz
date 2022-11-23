@@ -10,7 +10,7 @@ const config = {
   projectName: "saramin_quiz",
   deploymentBranch: "gh-pages",
   scripts: ["https://buttons.github.io/buttons.js"],
-  favicon: `${root}img/logo-saramin.svg`,
+  favicon: `${root}img/saramin.png`,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
